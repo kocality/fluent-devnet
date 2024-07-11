@@ -372,7 +372,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   console.log("deployerAddress", deployerAddress);
 
-  // WASM Kontratını Deploy Etme
+  // Deploying WASM Contract
   console.log("Deploying WASM contract...");
   const wasmBinaryPath = "./greeting/bin/greeting.wasm";
   const provider = new ethers.providers.JsonRpcProvider(network.config.url);
@@ -380,7 +380,7 @@ const func: DeployFunction = async function (hre: HardhatRuntimeEnvironment) {
 
   const fluentGreetingContractAddress = await deployWasmContract(wasmBinaryPath, deployer, provider, getOrNull, save);
 
-  // Solidity Kontratını Deploy Etme
+  // Deploying Solidity Contract
   console.log("Deploying GreetingWithWorld contract...");
   const greetingWithWorld = await deploy("GreetingWithWorld", {
     from: deployerAddress,
