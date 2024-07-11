@@ -32,6 +32,7 @@ Bu rehberi takip ederek, şunları nasıl yapacağınızı öğreneceksiniz:
 sudo apt update
 sudo apt upgrade -y
 sudo apt install build-essential -y
+```
 
 ```bash
 # Node.js ve npm Kurulumu
