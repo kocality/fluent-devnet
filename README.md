@@ -11,9 +11,10 @@ The first blended execution network. Fluent blends Wasm, EVM and SVM apps into a
 * [Github](https://github.com/fluentlabs-xyz)
 * [Devnet Explorer](https://blockscout.dev.thefluent.xyz/)
 
+For more information about Fluent, you can find my article "Fluent: Simplifying Blockchain Technology with Blended Execution" from [this link](https://mirror.xyz/kocality.eth/orzqskeUXS_lefo0oo99nB9r21wdKzJGp7gfquYdLlc).
 
 
-## Introduction
+## About Guide
 This guide provides step-by-step instructions to create a Blended (HelloWorld) application on Fluent Devnet. The application consists of a Rust smart contract that prints "Hello" and a Solidity smart contract that prints "World." This setup demonstrates:
 
 - **Composability:** Integrating different programming languages (Solidity and Rust) into a single application.
@@ -191,9 +192,11 @@ npm init -y
 npm install --save-dev typescript ts-node hardhat hardhat-deploy ethers dotenv @nomicfoundation/hardhat-toolbox @typechain/ethers-v6 @typechain/hardhat @types/node
 pnpm add ethers@^5.7.2 @nomiclabs/hardhat-ethers@2.0.6
 pnpm install
-
 npx hardhat
 ```
+After `npx hardhat` command, it will ask us for some information, enter it as in the image below
+
+![hardhat2](https://github.com/kocality/fluent-devnet/assets/69348404/ba8d407c-6d61-4fac-b628-f170ba13e2cd)
 
 ## Configure TypeScript and Hardhat
 
@@ -299,6 +302,9 @@ nano .env
 ```bash
 DEPLOYER_PRIVATE_KEY=your-private-key-here
 ```
+
+![private](https://github.com/kocality/fluent-devnet/assets/69348404/767b2ce6-caf0-4885-8f28-77f2a50d6af0)
+
 
 ## Write Solidity Contracts
 
@@ -461,6 +467,9 @@ task("get-greeting", "Fetches the greeting from the deployed GreetingWithWorld c
 ## Step 5: Compile and Deploy the Contracts
 After deploying the contract with the `pnpm hardhat deploy` command, we will enter the tx output we get as in the photo in the 0x.... section in the `pnpm hardhat get-greeting --contract 0x.....` code. 
 
+![deploy](https://github.com/kocality/fluent-devnet/assets/69348404/65c39233-29cf-4110-afa1-13c1edbca9e7)
+
+
 ```bash
 pnpm hardhat compile
 
@@ -468,5 +477,10 @@ pnpm hardhat deploy
 
 pnpm hardhat get-greeting --contract 0x.....
 ```
+
+If you get the output you see below, it means it is done. You can search for tx through Explorer.
+
+![son](https://github.com/kocality/fluent-devnet/assets/69348404/a83133f6-3ef3-44a8-8a88-d49beef76f1f)
+
 
 
